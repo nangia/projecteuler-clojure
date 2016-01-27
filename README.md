@@ -1,36 +1,21 @@
 # projecteuler-clojure
 
-FIXME: description
+Projecteuler.net problems solved for fun
 
-## Installation
-
-Download from http://example.com/FIXME.
 
 ## Usage
 
 FIXME: explanation
 
-    $ java -jar projecteuler-clojure-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
+    $ java -jar projecteuler-clojure-0.1.0-standalone.jar problem-number 
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+`lein run 1`
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Sandeep Nangia 
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
