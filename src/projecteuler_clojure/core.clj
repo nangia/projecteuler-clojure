@@ -34,15 +34,12 @@
        (reduce +)
        ))
 
-
-
 (def problem-func-map
   {1 problem1,
    2 problem2})
 
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
   (if (not= 1 (count args))
     (println "Give problem number as argument")
