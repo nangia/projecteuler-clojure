@@ -1,7 +1,7 @@
 (ns projecteuler-clojure.core
   (:gen-class))
 
-
+;========================
 (defn problem1[]
   ; If we list all the natural numbers below 10 that are multiples of 3 or 5,
   ; we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -12,7 +12,7 @@
        (reduce +)))
 
 
-
+;======================
 (defn fib-next [[fib1 fib2 number]]
   [fib2 (+ fib1 fib2) (inc number)])
 
@@ -33,10 +33,34 @@
        (filter #(== 0 (mod % 2)))
        (reduce +)
        ))
+;======================
+; 2520 is the smallest number that can be divided by each of the numbers from
+; 1 to 10 without any remainder. What is the smallest positive number that is evenly
+; divisible by all of the numbers from 1 to 20?
+(defn gcd
+  ;; greatest common divisor
+  ;; Euclid's algorithm for finding gcd
+  [a b]
+  (loop [a a b b]
+    (if (== b 0 )
+      a
+      (recur b (mod a b)))))
+
+(defn lcm
+  ;; least common multiple
+  [a b]
+  (* (/ a (gcd a b)) b))
+  
+
+(defn problem5
+  []
+  (reduce lcm (range 1 21)))
+;=======================
 
 (def problem-func-map
   {1 problem1,
-   2 problem2})
+   2 problem2
+   5 problem5})
 
 
 (defn -main
